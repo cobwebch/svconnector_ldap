@@ -7,7 +7,7 @@ LDAP Connector service
 .. only:: html
 
         :Classification:
-                <extension key>
+                svconnector_ldap
 
         :Version:
                 |release|
