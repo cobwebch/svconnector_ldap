@@ -1,0 +1,12 @@
+host = ldap.virginia.edu
+port = 389
+protocol = 3
+login =
+password =
+search_base = o=University of Virginia,c=US
+search_filter = (cn=*smith*)
+search_attributes = displayname,description,mail
+search_attributes_only =
+search_size_limit =
+search_time_limit =
+search_deref =
