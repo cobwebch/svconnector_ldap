@@ -89,7 +89,7 @@ class Connector extends \tx_svconnector_base {
 		$ldapResult = @ldap_bind(
 			$ldapConnection,
 			(empty($parameters['login'])) ? null : $parameters['login'],
-			(empty($parameters['password'])) ? null : $this->extConf['password']
+			(empty($parameters['password'])) ? null : $parameters['password']
 		);
 		if ($ldapResult) {
 			return $ldapConnection;
@@ -220,6 +220,7 @@ class Connector extends \tx_svconnector_base {
 				$data = $processor->processResponse($data, $this);
 			}
 		}
+		@ldap_close($ldapConnection);
 
 			// Return the result
 		return $data;
